@@ -1,0 +1,203 @@
+# i.  Evaluate value of  px=-1+2x+6x2+2x3    for x = 3
+
+# 2x3 - 6x2 + 2x - 1 for x = 3
+poly = [2, -6, 2, -1]
+x = 3
+n = len(poly)
+
+# Declaring the result
+result = 0
+
+# Running a for loop to traverse through the list
+for i in range(n):
+
+	# Declaring the variable Sum
+	Sum = poly[i]
+
+	# Running a for loop to multiply x (n-i-1)
+	# times to the current coefficient
+	for j in range(n - i - 1):
+		Sum = Sum * x
+
+	# Adding the sum to the result
+	result = result + Sum
+
+# Printing the result
+print(result)
+
+
+
+
+
+# Python program to find roots of quadratic equation
+import math 
+  
+  
+# function for finding roots
+def anyname(a, b, c): 
+  
+    # calculating discriminant using formula
+    dis = b * * b - 4 * a * c 
+    sqrt_val = math.sqrt(abs(dis)) 
+      
+    # Checking the nature of roots 
+    if dis > 0: 
+        print(" real and different roots ") 
+        print((-b + sqrt_val)/(2 * a)) 
+        print((-b - sqrt_val)/(2 * a)) 
+      
+    elif dis == 0: 
+        print(" real and same roots") 
+        print(-b / (2 * a)) 
+      
+    # when discriminant is less than 0
+    else:
+        print("Complex Roots") 
+        print(- b / (2 * a), " + i", sqrt_val/(2 * a)) 
+        print(- b / (2 * a), " - i", sqrt_val/(2 * a)) 
+  
+# Driver Program to give the inputs of quadratic equations 
+ 
+Get the inputs of the coefficient of the quadratic equation and declare its data type. ax2+bx+c=0
+a=int(input(“enter the coefficient of x^2 : )
+b=
+ c
+# To check for valid quadratic equation
+if a == 0: 
+        print("Given equation is not a valid quadratic equation") 
+  
+else:
+    anyname(a, b, c)
+
+
+
+
+
+from sympy import * 
+  
+x, y = symbols('x y')
+expr = x**2 + 2 * y + y**3
+print("Expression : {} ".format(expr))
+   # Use sympy.Derivative() method 
+expr_diff = Derivative(expr, x)  
+print("Derivative of expression with respect to x : {}".format(expr_diff))  
+print("Value of the derivative : {} ".format(expr_diff.doit()))
+
+
+import sympy as sp
+x= sp.Symbol ('x')
+Expression=3.0*x**2+1
+print(Expression)
+ print(sp.integrate(Expression,x))
+
+ f(x):
+    return 3.0*x**2+1
+i=quad(f,from scipy.integrate import quad
+def0,2)
+print(i[0])
+print(i[1])
+
+
+
+
+
+import sympy as sp
+
+x= sp.Symbol ('x')
+Expression=3*x**2+1
+print(Expression)
+print(sp.integrate (Expression, x))
+
+
+
+
+
+from scipy import signal
+import matplotlib.pyplot as plot
+import numpy as np
+
+#Sampling rate 1000 hz / second
+ t = np.linspace(0, 1, 1000, endpoint=True)
+#Plot the square wave signal
+plot.plot(t, signal.square (2*np.pi*5*t)) 
+#Give a title and Labels for the square wave plot
+plot.title('Sqaure wave -5 Hz sampled at 1000 Hz /second") plot.xlabel('Time')
+
+plot.ylabel('Amplitude')
+
+plot.grid(True, which='both") 
+# Provide x axis and Line color
+plot.axhline(y=0, color='k'). 
+# Set the max and min values for y axis
+
+plot.ylim(-2, 2)
+
+# Display the square wave
+
+plot.show()
+
+
+
+import numpy as np
+
+from scipy import signal as sg import matplotlib.pyplot as plt
+
+# Use input statements to get the inputs from the user
+
+freq =2
+
+amp =5
+
+time = np.linspace(0, 2, 1000)
+
+#Plotting of Square Wave with duty cycle 50% 
+sqsignal =amp*sg.square (2*np.pi*freq*time, duty=0.5)
+ #Plotting the wave within a window or frome of specified size 
+plt.figure(figsize=(10,4))
+
+#Labelling the figure
+
+plt.title('Sqaure wave -f=2; A=5, d=0.5 (50% duty cycle) ')
+
+plt.plot(time, sqsignal) plt.xlabel("Time (s)")
+ # Give x axis Label for the square wave plot
+
+plt.ylabel('Amplitude') #Give y axis Label for the square wave plot
+
+plt.show() # Display the square wave
+
+
+
+
+import numpy as np import import random as random
+
+import matplotlib.pyplot as plt
+
+num_s=8192 #number of symbols
+ z=np.randon.normal(0,1,size=num_s) #samples drawn from a randon normal dist 
+power =np.mean(np.abs(z**2)) #Mean Squared power print("Mean Square Power = ", power)
+
+fig =plt.figure(figsize (8,4), dpi=80, facecolor="w", edgecolor="k")
+
+plt.plot(z)
+
+pit.ylabel("Amplitude")
+
+plt.xlabel("sample Index")
+
+plt.title("Real Gaussian Noise")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
